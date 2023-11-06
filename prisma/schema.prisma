@@ -16,6 +16,19 @@ model Product{
   description String?
   price Float
   storageInfo StorageInfo?
+  storeId Int 
+  store Store @relation(fields: [storeId], references: [id])
+}
+
+model Categories{
+  id Int @id @default(autoincrement())
+  name String
+}
+
+model Store{
+  id Int @id @default(autoincrement())
+  name String 
+  products Product[]
 }
 
 model StorageInfo{
