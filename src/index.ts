@@ -6,7 +6,7 @@ const storeServices = new StoreServices();
 const productServices = new ProductServices();
 
 async function exampleController() {
-   const response = await storeServices.findMany("osvaldo");
+   const response = await storeServices.findOne(6);
 
    console.log(response);
 }
