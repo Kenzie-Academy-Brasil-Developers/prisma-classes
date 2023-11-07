@@ -7,7 +7,7 @@ export class StoreServices{
 
     async createMany(storeNames: string[]){
         const stores = storeNames.map(storeName => ({ name: storeName }));
-        
-        return await prisma.store.createMany({ data: stores})
+
+        return await prisma.store.createMany({ data: stores })
     }
 }
