@@ -6,14 +6,9 @@ const storeServices = new StoreServices();
 const productServices = new ProductServices();
 
 async function exampleController() {
-   const response = await productServices.create({
-      name: "Computador",
-      price: 2500,
-      description: "Computador bonito",
-      storeId: 6,
-   });
+   const response = await storeServices.findOne(6);
 
    console.log(response);
 }
 
-// exampleController();
+ exampleController();
