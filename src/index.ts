@@ -6,8 +6,7 @@ const storeServices = new StoreServices();
 const productServices = new ProductServices();
 
 async function exampleController() {
-   const response = await storeServices.updateOne(1 ,{ name: "New Alex Store"});
-
+   const response = await productServices.updateMany(6, { price: 4000 });
    console.log(response);
 }
 
