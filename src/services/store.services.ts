@@ -27,10 +27,12 @@ export class StoreServices {
       });
    }
 
-   //update - updateMany
-
    async updateOne(storeId: number, data: TUpdateStoreBody){
       return await prisma.store.update({ where: { id: storeId }, data });
+   }
+
+   async deleteMany(name: string){
+      return await prisma.store.deleteMany({ where: { name }});
    }
 
 }

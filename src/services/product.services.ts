@@ -9,4 +9,8 @@ export class ProductServices{
     async updateMany(storeId: number, data: TUpdateProductBody){
         return await prisma.product.updateMany({ where: { storeId: storeId }, data });
     }
+
+    async deleteOne(productId: number){
+        return await prisma.product.delete({ where: { id: productId }});
+    }
 }
